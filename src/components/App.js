@@ -1,7 +1,7 @@
 import React, { useReducer, useEffect } from "react";
 import "../App.css";
 import Header from "./Header";
-import Movie from "./Movie";
+import Movie from "./Movie"
 import Search from "./Search";
 
 
@@ -46,14 +46,14 @@ const App = () => {
 
   useEffect(() => {
     fetch(MOVIE_API_URL)
-        .then(response => response.json())
-        .then(jsonResponse => {
-    
+      .then(response => response.json())
+      .then(jsonResponse => {
+
         dispatch({
-            type: "SEARCH_MOVIES_SUCCESS",
-            payload: jsonResponse.Search
+          type: "SEARCH_MOVIES_SUCCESS",
+          payload: jsonResponse.Search
+        });
       });
-    });
   }, []);
 
   const search = searchValue => {
@@ -62,20 +62,20 @@ const App = () => {
     });
 
     fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=${API_KEY}`)
-    .then(response => response.json())
-    .then(jsonResponse => {
-      if (jsonResponse.Response === "True") {
-        dispatch({
+      .then(response => response.json())
+      .then(jsonResponse => {
+        if (jsonResponse.Response === "True") {
+          dispatch({
             type: "SEARCH_MOVIES_SUCCESS",
             payload: jsonResponse.Search
-        });
-      } else {
-        dispatch({
+          });
+        } else {
+          dispatch({
             type: "SEARCH_MOVIES_FAILURE",
             error: jsonResponse.Error
-        });
-      }
-    });
+          });
+        }
+      });
   };
 
   const { movies, errorMessage, loading } = state;
@@ -83,20 +83,20 @@ const App = () => {
   return (
     <div className="App">
       <div className="Nav">
-        <Header text="HOOKED" />
+        <Header text="ALISHKA DB" />
         <Search search={search} />
       </div>
-      <p className="App-intro">Sharing a few of our favorite movies</p>
+      <p className="App-intro">Search Results</p>
       <div className="movies">
         {loading && !errorMessage ? (
           <span className="loader"></span>
         ) : errorMessage ? (
           <div className="errorMessage">{errorMessage}</div>
         ) : (
-          movies.map((movie, index) => (
-            <Movie key={`${index}-${movie.Title}`} movie={movie} />
-          ))
-        )}
+              movies.map((movie, index) => (
+                <Movie key={`${index}-${movie.Title}`} movie={movie} />
+              ))
+            )}
       </div>
     </div>
   );

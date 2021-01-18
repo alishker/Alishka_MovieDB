@@ -7,7 +7,7 @@
 
 .Nav {
   position: relative;
-  background-color: #0F2347;
+  background-color: #0c0d0f;
   height: 56px;
   box-sizing: border-box;
   padding: 10px 80px;
@@ -15,7 +15,7 @@
 
 .App-header > h2 {
   margin: 0;
-  color: #c3d8fd;
+  color: #edf1f8;
   cursor: pointer;
   transition: all 0.4s;
 }
@@ -33,11 +33,11 @@
 .search > input[type="text"] {
   border: none;
   padding: 8px 14px;
-  color: #666;
+  color: rgb(10, 10, 10);
   width: 230px;
   font-size: 14px;
   transition: all .3s ease-in-out;
-  background-color: #c3d8fd;
+  background-color: #d2d8e2;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
