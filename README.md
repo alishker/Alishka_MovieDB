@@ -1,14 +1,21 @@
-# Movie App Made with ReactJs
-
-![https://imgur.com/a/D9p1aCL](https://i.imgur.com/lsLkNcz.jpg)
+# Fetch data from MovieDB 'omdbap' with ReactJs
 
 ## About
 > Simple movie search application made with React Js.
 
+## features
+> Search for any movie
+> netflix like texture
+>applealing animations
+
+
 ## Installation Instructions
-1. Run ```git clone https://github.com/kateamethyst/react-movie-app.git react-movie-app```
-2. Run ```cd react-movie-app```
+1. Run ```git clone <repo url>```
+2. Run ```cd  <main folder>```
 3. Run ```npm start```
 
-## Reference
-> https://www.freecodecamp.org/news/how-to-build-a-movie-search-app-using-react-hooks-24eb72ddfaf7/
+## Screenshots
+
+## extra features to be added
+> onclick movie to dispaly more info about movie
+
